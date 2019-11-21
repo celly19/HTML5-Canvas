@@ -1,0 +1,46 @@
+<!doctype html>
+ <canvas id="myCanvas" width="450" height="250">
+        UPGRADE!!</canvas>
+        
+        <script>
+  //getCanvas 
+ var canvas = document.getElementById("myCanvas");
+                
+            
+        //get context
+  var context = canvas.getContext("2d");
+  var centerX = canvas.width / 2;
+  var centerY = canvas.height / 2;
+  var radius = 85;
+  var eyeRadius = 15;
+  var eyeXOffset = 28;
+  var eyeYOffset = 20;
+  
+  // draw the yellow circle
+  context.beginPath();
+  context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+  context.fillStyle = 'rgb(253,181,10)';
+  context.fill();
+  context.lineWidth = 4;
+  context.strokeStyle = 'white';
+  context.stroke();
+    
+  // draw the eyes
+  context.beginPath();
+  var eyeX = centerX - eyeXOffset;
+  var eyeY = centerY - eyeXOffset;
+  context.arc(eyeX, eyeY, eyeRadius, 0, 2 * Math.PI, false);
+  var eyeX = centerX + eyeXOffset;
+  context.arc(eyeX, eyeY, eyeRadius, 0, 2 * Math.PI, false);
+  context.fillStyle = 'white';
+  context.fill();
+  
+  // draw the mouth
+  context.beginPath();
+  context.arc(centerX, 135, 45, 0, Math.PI, false);
+  context.fillStyle='white';
+  context.fill();
+  context.closePath();
+  context.stroke();
+        
+</script>

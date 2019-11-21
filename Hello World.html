@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <title>HTML5 Canvas </title>
+    </head>
+    <body>
+        <style>
+            #myCanvas{
+                border: 1px solid black;
+            }    
+        </style>
+        
+    <canvas id="myCanvas" width="150" height="125" style="border:6px solid rgb(95,161,55);">
+        UPGRADE!!</canvas>
+        
+        <script>
+            //getCanvas 
+            //references to the ID
+        var canvas = document.getElementById("myCanvas");
+            
+        //get context
+        var c = canvas.getContext("2d");
+            
+             c.font="35pt Times New Roman";
+               // c.fillStyle="rgba(255,0,0,.5)";
+            
+        //HelloWorld
+        c.fillText("Hello", 22,55);
+        c.fillText("World!", 10,100);
+        </script>
+    </body>
+</html>

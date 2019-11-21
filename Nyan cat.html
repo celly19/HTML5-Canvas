@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+<body>
+    <canvas id="myCanvas" width="300" height="300">Upgrade your browser! – The Management
+    <img id="cat"  src="http://rvccmccs01.raritanval.edu/~scaruso/iti332/nyan.gif" alt="The Scream">
+
+    </canvas>
+    
+    <style>
+        #myCanvas {  border:1px solid #008ee2; }    
+    </style>
+    
+    <script>
+        //Our Canvas
+        var canvas= document.getElementById("myCanvas");
+     //Our Context
+        var c= canvas.getContext("2d");
+        
+        //css color definition
+        c.fillStyle ="#008ee2";
+        c.fillRect(0,0, 300, 300);
+        
+        //left cloud
+        c.fillStyle="white";
+        c.fillRect(45,30,15,15);
+        c.fillRect(30,45,15,15);
+        c.fillRect(60,45,15,15);  
+        c.fillRect(45,60,15,15);
+        
+        //upper-middle cloud
+        c.fillStyle="white";
+        c.fillRect(160,15,15,15);
+        c.fillRect(145,30,15,15);
+        c.fillRect(175,30,15,15);
+        c.fillRect(160,45,15,15);
+        
+        //right cloud
+        c.fillStyle="white";
+        c.fillRect(245,25,15,15);      
+        c.fillRect(230,40,15,15);       
+        c.fillRect(260,40,15,15);
+        c.fillRect(245,55,15,15);
+        
+        //bottom cloud
+        c.fillStyle="white";
+        c.fillRect(100,230,15,15);
+        c.fillRect(85,245,15,15);
+        c.fillRect(115,245,15,15);
+        c.fillRect(100,260,15,15);
+        
+        //red stripe
+        c.fillStyle="red";
+        c.fillRect(0,120,160,10);
+        //orange stripe
+        c.fillStyle="orange";
+        c.fillRect(0,130,160,10);
+        //yellow stripe
+        c.fillStyle="yellow";
+        c.fillRect(0,140,160,10);
+        //green stripe
+        c.fillStyle="lightgreen";
+        c.fillRect(0,150,160,10);
+        //blue stripe
+        c.fillStyle="blue";
+        c.fillRect(0,160,160,10);
+        //purple stripe
+        c.fillStyle="purple";
+        c.fillRect(0,170,160,10);
+        
+    
+        
+        var img = new Image();//We create the object
+        img.addEventListener("load", function() {//We set up the listener 
+            c.drawImage( img, 100, 100,161,100 );//When it loads it draws
+        });
+        img.src = "http://rvccmccs01.raritanval.edu/~scaruso/iti332/nyan.gif";
+        
+        
+        
+    </script>
+</body>
+</html> 
